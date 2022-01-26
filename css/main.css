@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* 
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+/* Generales */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+}
+
+/* Principal */
+.principal {
+  display: flex;
+  max-width: 768px;
+  min-width: 320px;
+}
+
+/* Columnas */
+.columna {
+  color: hsla(0, 0%, 100%, 0.75);
+  padding: 2rem;
+  width: 33%;
+  overflow: hidden;
+  transition: width .2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.columna.activa {
+  width: 50%;
+}
+
+.columna:first-of-type {
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+}
+
+.columna:last-of-type {
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.subs {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.titulo {
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+}
+
+.texto {
+  font-size: 15px;
+  margin-bottom: 4rem;
+  flex-grow: 1;
+}
+
+.enlace {
+  text-decoration: none;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 1rem;
+  padding: .5rem 1rem;
+  font-size: 13px;
+}
+
+.enlace:hover {
+  background-color: transparent;
+  border: 1px solid hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%) !important;
+}
+
+
+.sedans .enlace {
+  color: hsl(31, 77%, 52%);
+}
+
+.subs .enlace {
+  color: hsl(184, 100%, 22%);
+  margin-top: 50px;
+}
+
+.luxury .enlace {
+  color: hsl(179, 100%, 13%);
+}
+
+@media (max-width: 601px) {
+
+  body {
+    font-family: 'Lexend Deca', sans-serif;
+    display: initial;
+    background: lightgray;
+  }
+
+  /* Principal */
+  .principal {
+    flex-direction: column;
+    margin: 60px;
+  }
+
+  .columna {
+    color: hsla(0, 0%, 100%, 0.75);
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .sedans {
+    border-top-right-radius: .5rem;
+    border-bottom-left-radius: 0 !important;
+  }
+}
